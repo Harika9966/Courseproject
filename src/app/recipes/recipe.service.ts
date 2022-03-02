@@ -17,9 +17,9 @@ export class RecipeService{
           ]
         ),
         new Recipe(   
-          'Spicy Chicken Pizza',
-          'Here what you need pizza sauce, Franks Original',
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ4jC8s_cogyu1pu_bX_v5Mhsz5frTpK6nUA&usqp=CAU',
+          'Worlds Best Lasagna',
+          'John Chandlers lasagna is our most popular recipe.',
+          'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F8963973.jpg&w=820&h=459&c=sc&poi=face&q=60',
           [
             new Ingredient('Buns',1),
             new Ingredient('egg',10)
@@ -31,6 +31,9 @@ export class RecipeService{
       
       getRecipes() {
           return this.recipes.slice();
+      }
+      getRecipe(index:number){
+        return this.recipes[index];
       }
 
       addIngredientsToShoppingList(ingredients:Ingredient[]){
